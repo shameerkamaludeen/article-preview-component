@@ -1,0 +1,314 @@
+/* font-family: 'Spartan', sans-serif; */
+/* || General style rules */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+  
+/* This as the class implies hide the lement visually */
+.hide-visually {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+/* || Typography */
+
+body {
+    letter-spacing: 0.2px;
+    font-size: 10px;
+    line-height: 1.5;
+    word-spacing: 0.8px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    background-color: hsl(210, 46%, 95%);
+}
+
+h1 {
+    background-color: hsl(217, 19%, 35%);   /* Very Dark Grayish Blue */
+    background-color: hsl(214, 17%, 51%);   /* Desaturated Dark Blue */
+    background-color: hsl(212, 23%, 69%);   /* Grayish Blue */
+    background-color: hsl(210, 46%, 95%);   /* Light Grayish Blue */
+}
+
+.section-preview h2 {
+    font-size: 1rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.section-preview .wrapper-desc > p, 
+.section-preview span {
+    font-size: 0.8125rem;
+}
+
+.section-preview .wrapper-desc > p {
+    color: hsl(214, 17%, 51%);
+}
+
+.section-preview .wrapper-profile-info div:first-child span {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+} 
+
+.section-preview .wrapper-profile-info div:last-child span {
+    color: hsl(212, 23%, 69%);
+}
+
+.section-preview .wrapper-share span {
+    color: hsl(212, 23%, 69%);
+}
+
+/* || Layout */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    flex: 0;
+}
+
+/* || Section preview */
+
+.section-preview {
+    background-color: white;
+    width: 88%;
+    margin: 7em auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 26px hsl(212deg 23% 69% / 20%);
+    position: relative;
+    max-width: 73em;
+}
+
+.section-preview .wrapper-preview-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.section-preview .wrapper-desc {
+    margin: 4em 3em 2em;
+}
+
+.section-preview .wrapper-desc > p {
+    margin-bottom: 2.18em;
+}
+
+
+.section-preview .wrapper-profile {
+    display: flex;
+    align-items: center;
+}
+
+.section-preview .wrapper-profile > img {
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-right: 1.5em;
+}
+
+.section-preview .wrapper-profile-info {
+    flex: 1;
+}
+
+.section-preview .wrapper-profile > div:last-child {
+    width: 3.2em;
+    height: 3.2em;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.section-preview .wrapper-profile.active > div:last-child {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.section-preview .wrapper-profile > div:last-child img {
+    width: 50%;
+}
+
+.section-preview .wrapper-share {
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.section-preview .wrapper-share.active {
+    height: 6.5em;
+    transition: all 0.2s;
+    overflow: initial;
+}
+
+.section-preview .wrapper-share > div {
+    margin: 0 3em;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.section-preview .wrapper-share span {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.625rem;
+    margin-right: 2em;
+}
+
+.section-preview .wrapper-share > div > a {
+    margin-right: 1.5em;
+}
+
+.section-preview .wrapper-share > div div:last-child {
+    width: 3.2em;
+    height: 3.2em;
+    background-color: hsl(214, 17%, 51%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.section-preview .wrapper-share > div div:last-child img {
+    width: 50%;
+}
+/* Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 44.0625em) {
+
+    /* || Section preview */
+    
+    .section-preview {
+        display: flex;
+    }
+
+    .section-preview .wrapper-preview-img {
+        flex: 1 1 39%;
+    }
+
+    .section-preview .wrapper-preview-img img {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .section-preview .wrapper-desc {
+        flex: 1 1 61%;
+        margin: 1.67em 4em 3em;
+    }
+
+    
+    .section-preview .wrapper-desc > p {
+        margin-bottom: 1.25em;
+    }
+    
+    .section-preview .wrapper-share {
+        left: 65%;
+        bottom: 28%;
+        border-radius: 10px;
+        width: 25em;
+        box-shadow: 0px 14px 20px -4px hsl(217deg 19% 35% / 20%);
+    }
+
+    .section-preview .wrapper-share::after {
+        content: '';
+        height: 0;
+        width: 0;
+        bottom: -2em;
+        left: 16em;
+        position: absolute;
+        border: 10px solid transparent;
+        border-top-color: hsl(217, 19%, 35%);
+    }
+
+    .section-preview .wrapper-share.active {
+        height: 5.5em;
+    }
+
+    .section-preview .wrapper-share > div div:last-child {
+        display: none;
+    }
+
+    .section-preview .wrapper-share > div {
+        justify-content: center;
+    }
+
+    .section-preview .wrapper-share > div > a:nth-of-type(3) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 46.87em) {
+    
+    /* || Section preview */
+
+    .section-preview h2 {
+        font-size: 1.25rem;
+    }
+
+    .section-preview .wrapper-share {
+        bottom: 32%;
+    }
+
+    .section-preview .wrapper-share::after {
+        left: 18em;
+    }
+}
+
+@media screen and (min-width: 52.5em) {
+
+    /* || Section preview */
+
+    .section-preview .wrapper-share {
+        left: 73%;
+    }
+
+    .section-preview .wrapper-share::after {
+        left: 14em;
+    }
+    
+}
