@@ -31,6 +31,8 @@ Users should be able to:
 
 ![](./screenshot.png)
 
+### Links
+
 - Solution URL: [Click here](https://github.com/shameerkamaludeen/article-preview-component)
 - Live Site URL: [Click here](https://shameerkamaludeen.github.io/article-preview-component/)
 
